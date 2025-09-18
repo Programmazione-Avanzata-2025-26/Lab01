@@ -9,8 +9,8 @@ def muovi(pos, mossa):
 
 
 def gestisci_livello(livello):
-    """ Gestisce un singolo livello del labirinto
-    La funzione deve ritornare un bool:
+    """ Gestisce un singolo livello del gioco.
+    Ritorna:
     * True se il giocatore raggiunge l'uscita
     * False se il giocatore va oltre i limiti della griglia.
     """
