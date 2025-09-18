@@ -1,4 +1,12 @@
 # Lab 01
+
+#### Obiettivi
+
+- Ripasso e consolidamento dei concetti base: strutture condizionali e cicli
+- Strutture dati base: variabili, array, liste
+- Approccio modulare alla scrittura del codice (funzioni)
+- Gestione interattiva di input utente.
+
 ## Gioco del Labirinto
 Si vuole realizzare un programma in Python per gestire un gioco in cui il giocatore deve raggiungere l’uscita di un labirinto rappresentato da una griglia.
 
