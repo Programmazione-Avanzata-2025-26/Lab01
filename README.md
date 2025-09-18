@@ -1,6 +1,5 @@
 # Lab 01
-## Gioco del Labirinto Testuale
-
+## Gioco del Labirinto
 Si vuole realizzare un programma in Python per gestire un gioco in cui il giocatore deve raggiungere l’uscita di un labirinto rappresentato da una griglia.
 
 ---
