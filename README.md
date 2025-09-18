@@ -51,7 +51,7 @@ P . . .
 
 ## Funzioni da implementare
 
-Il sample fornito `labirinto.py` contiene già le definizioni delle funzioni principali che dovrete implementare:
+Il sample fornito `labirinto.py` contiene già la funzione `main()` e le definizioni delle funzioni principali che dovrete implementare:
 
 ---
 
