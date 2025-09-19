@@ -2,10 +2,10 @@
 
 #### Obiettivi
 
-- Ripasso e consolidamento dei concetti base: strutture condizionali e cicli
-- Strutture dati base: variabili e liste
-- Approccio modulare alla scrittura del codice (funzioni)
-- Gestione interattiva di input utente.
+- Ripasso e consolidamento dei concetti base: strutture condizionali e cicli.
+- Strutture dati base quali variabili e liste.
+- Approccio modulare alla scrittura del codice (funzioni).
+- Gestione interattiva di input utente e logica di gioco.
 
 
 ## Gioco del Labirinto
