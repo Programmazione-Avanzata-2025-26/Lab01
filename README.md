@@ -7,8 +7,11 @@
 - Approccio modulare alla scrittura del codice (funzioni)
 - Gestione interattiva di input utente.
 
+
 ## Gioco del Labirinto
-Si vuole realizzare un programma in Python per gestire un gioco in cui il giocatore deve raggiungere l’uscita di un labirinto rappresentato da una griglia.
+
+Si vuole realizzare un programma in Python per gestire un gioco in cui il giocatore deve raggiungere l’uscita 
+di una stanza rappresentata attraverso una griglia.
 
 ---
 
@@ -21,18 +24,18 @@ Ogni livello del gioco è una griglia quadrata di dimensione crescente:
 - **Livello 2** → griglia 4x4  
 - … fino al livello massimo definito nel programma (es. livello 5)
 
-Il giocatore parte sempre dalla cella in alto a sinistra `[0,0]` e l’uscita è sempre in basso a destra `[n-1,n-1]`.
+Il giocatore parte da una posizione randomica `[x,y]` e l’uscita è sempre in basso a destra `[n-1,n-1]`.
 
 ### Simboli nella griglia
 
-- `P` → giocatore  
+- `G` → giocatore  
 - `U` → uscita  
 - `.` → spazio vuoto
 
-### Esempio di griglia livello 2 (4x4)
+### Esempio di griglia livello 2 (4x4), giocatore in `[0,1]`
 
 ```console
-P . . .
+. G . .
 . . . .
 . . . .
 . . . U
@@ -43,7 +46,7 @@ P . . .
 ## Regole del gioco
 
 1. Il gioco inizia al livello 0.  
-2. Il giocatore inserisce una mossa:  
+2. Il giocatore inserisce una mossa attraverso la tastiera:  
    - `n` → nord (su)  
    - `s` → sud (giù)  
    - `e` → est (destra)  
@@ -58,16 +61,16 @@ P . . .
 
 ## Funzioni da implementare
 
-Il sample fornito `labirinto.py` contiene già la funzione `main()` e le definizioni delle funzioni principali che dovrete implementare:
+Il programma di base fornito `room_escape.py` contiene già le definizioni delle funzioni principali che dobranno essere implementate:
 
 ---
 
 ### `gestisci_livello(livello)`
 
-**Descrizione:** Gestisce un singolo livello del labirinto, mostrando la griglia e gestendo i movimenti.
+**Descrizione:** Gestisce un singolo livello del labirinto, mostrando la griglia e aggiornando i movimenti.
 
 **Parametri:**
-- `livello` (int): numero del livello corrente (determina la dimensione della griglia)
+- `livello`: un intero rappresentante il numero del livello corrente
 
 **Valore di ritorno:**
 - `True` se il giocatore raggiunge l’uscita
@@ -80,11 +83,11 @@ Il sample fornito `labirinto.py` contiene già la funzione `main()` e le definiz
 **Descrizione:** Stampa la griglia con il giocatore, l’uscita e gli spazi vuoti.
 
 **Parametri:**
-- `n` (int): dimensione della griglia (n x n)
-- `pos` (list of int): posizione corrente del giocatore `[riga, colonna]`
-- `uscita` (list of int): posizione dell’uscita `[riga, colonna]`
+- `n`: un intero che indica la dimensione della griglia (n x n).
+- `pos`: una lista di due interi con le coordinate `[riga, colonna]` della posizione corrente del giocatore.
+- `uscita`: una lista di due interi con le coordinate `[riga, colonna]` della posizione dell’uscita.
 
-**Output:** Stampa a video la griglia. Nessun valore di ritorno.
+**Output:** Stampa la griglia nella console. Nessun valore di ritorno.
 
 ---
 
@@ -93,16 +96,16 @@ Il sample fornito `labirinto.py` contiene già la funzione `main()` e le definiz
 **Descrizione:** Aggiorna la posizione del giocatore in base alla mossa inserita.
 
 **Parametri:**
-- `pos` (list of int): posizione corrente del giocatore `[riga, colonna]`
-- `mossa` (str): direzione della mossa (`n`, `s`, `e`, `o`)
+- `pos`: una lista di due interi con le coordinate `[riga, colonna]` della posizione corrente del giocatore.
+- `mossa`: una stringa contenente le possibili direzione della mossa (`n`, `s`, `e`, `o`)
 
-**Output:** Aggiorna `pos` in-place. Nessun valore di ritorno.
+**Output:** Aggiorna la posizione del giocatore (aggiornando la lista, eventualmente restituendo anche una lista aggiornata come valore di ritorno).
 
 ---
 
 ## Esempio di esecuzione
 ```console
-=== Benvenuto al Gioco del Labirinto ===
+=== Benvenuto in Room Escape ===
 
 Livello 0) Griglia 2x2
 P .
