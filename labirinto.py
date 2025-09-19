@@ -1,5 +1,5 @@
 def stampa_griglia(n, pos, uscita):
-    """Stampa la griglia con P = giocatore, U = uscita, . = spazio vuoto"""
+    """Stampa la griglia con G = giocatore, U = uscita, . = spazio vuoto"""
     # TODO
 
 
@@ -9,10 +9,12 @@ def muovi(pos, mossa):
 
 
 def gestisci_livello(livello):
-    """ Gestisce un singolo livello del gioco.
+    """ Gestisce un singolo livello del gioco
     Ritorna:
     * True se il giocatore raggiunge l'uscita
     * False se il giocatore va oltre i limiti della griglia.
+
+    NB: Le funzioni stampa_griglia() e muovi() vanno chiamate dentro questa funzione
     """
 
     # Inizializzazioni
@@ -24,7 +26,7 @@ def gestisci_livello(livello):
 
 
 def main():
-    print("=== Benvenuto al Gioco del Labirinto ===")
+    print("=== Benvenuto in Room Escape ===")
     livello = 0
     max_livello = 5
 
