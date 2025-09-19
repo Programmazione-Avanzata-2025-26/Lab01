@@ -26,6 +26,8 @@ Ogni livello del gioco è una griglia quadrata di dimensione crescente:
 
 Il giocatore parte da una posizione randomica `[x,y]` e l’uscita è sempre in basso a destra `[n-1,n-1]`.
 
+**NB**: Per generare un numero randomico basta importare il modulo [`random`](https://docs.python.org/3.11/library/random.html) e usare le funzioni che mette a disposizione. 
+
 ### Simboli nella griglia
 
 - `G` → giocatore  
@@ -70,11 +72,11 @@ Il programma di base fornito `room_escape.py` contiene già le definizioni delle
 **Descrizione:** Gestisce un singolo livello del labirinto, mostrando la griglia e aggiornando i movimenti.
 
 **Parametri:**
-- `livello`: un intero rappresentante il numero del livello corrente
+- `livello`: un intero rappresentante il numero del livello corrente.
 
 **Valore di ritorno:**
-- `True` se il giocatore raggiunge l’uscita
-- `False` se il giocatore esce dai limiti della griglia
+- `True` se il giocatore raggiunge l’uscita.
+- `False` se il giocatore esce dai limiti della griglia.
 
 ---
 
@@ -97,7 +99,7 @@ Il programma di base fornito `room_escape.py` contiene già le definizioni delle
 
 **Parametri:**
 - `pos`: una lista di due interi con le coordinate `[riga, colonna]` della posizione corrente del giocatore.
-- `mossa`: una stringa contenente le possibili direzione della mossa (`n`, `s`, `e`, `o`)
+- `mossa`: una stringa contenente le possibili direzione della mossa (`n`, `s`, `e`, `o`).
 
 **Output:** Aggiorna la posizione del giocatore (aggiornando la lista, eventualmente restituendo anche una lista aggiornata come valore di ritorno).
 
