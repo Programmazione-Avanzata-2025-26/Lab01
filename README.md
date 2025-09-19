@@ -3,7 +3,7 @@
 #### Obiettivi
 
 - Ripasso e consolidamento dei concetti base: strutture condizionali e cicli
-- Strutture dati base: variabili, array, liste
+- Strutture dati base: variabili e liste
 - Approccio modulare alla scrittura del codice (funzioni)
 - Gestione interattiva di input utente.
 
