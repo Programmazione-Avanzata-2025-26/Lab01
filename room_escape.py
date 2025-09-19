@@ -19,9 +19,8 @@ def gestisci_livello(livello):
 
     # Inizializzazioni
     n = livello + 2
-    pos = [0, 0]  # posizione iniziale
     uscita = [n - 1, n - 1]  # posizione uscita
-
+     
     # TODO
 
 
@@ -40,3 +39,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
