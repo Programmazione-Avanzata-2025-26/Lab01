@@ -13,6 +13,8 @@ def muovi(pos, mossa):
         pos[1] += 1
     elif mossa == "o":
         pos[1] -= 1
+    else:
+        return
 
 
 def gestisci_livello(livello):
