@@ -5,7 +5,14 @@ def stampa_griglia(n, pos, uscita):
 
 def muovi(pos, mossa):
     """Aggiorna la posizione in base alla mossa"""
-    # TODO
+    if mossa == "n":
+        pos[0] -= 1
+    elif mossa == "s":
+        pos[0] += 1
+    elif mossa == "e":
+        pos[1] += 1
+    elif mossa == "o":
+        pos[1] -= 1
 
 
 def gestisci_livello(livello):
@@ -20,7 +27,22 @@ def gestisci_livello(livello):
     pos = [0, 0]  # posizione iniziale
     uscita = [n - 1, n - 1]  # posizione uscita
 
-    # TODO
+    print(f"\nLivello {livello}) Griglia {n}x{n}")
+    stampa_griglia(n, pos, uscita)
+
+    while pos != uscita:
+        mossa = input("Mossa (n/s/e/o): ").strip().lower()
+        muovi(pos, mossa)
+
+        # controllo uscita dai limiti
+        if pos[0] < 0 or pos[0] >= n or pos[1] < 0 or pos[1] >= n:
+            print("GAMEOVER: Sei uscito dalla griglia!")
+            return False
+
+        stampa_griglia(n, pos, uscita)
+
+    print("Hai raggiunto l’uscita!")
+    return True
 
 
 def main():
